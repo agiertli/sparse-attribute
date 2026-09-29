@@ -14,17 +14,7 @@ components:
 projects:
   - name: python-4cpu
     git:
+      checkoutFrom:
+        revision: cloned
       remotes:
         origin: https://github.com/agiertli/sparse-attribute.git
-commands:
-  - id: sparse-checkout
-    exec:
-      commandLine: |
-        cd ${PROJECT_SOURCE} &&
-        git config core.repositoryFormatVersion 1 &&
-        git sparse-checkout init --cone &&
-        git sparse-checkout set PYTHON/4CPU
-      component: dev
-events:
-  postStart:
-    - sparse-checkout
