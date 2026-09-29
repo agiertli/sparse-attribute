@@ -13,8 +13,18 @@ components:
       memoryLimit: 4Gi
 projects:
   - name: python-2cpu
-    attributes:
-      sparseCheckout: "PYTHON/2CPU/"
     git:
       remotes:
         origin: https://github.com/agiertli/sparse-attribute.git
+commands:
+  - id: sparse-checkout
+    exec:
+      commandLine: |
+        cd ${PROJECT_SOURCE} &&
+        git config core.repositoryFormatVersion 1 &&
+        git sparse-checkout init --cone &&
+        git sparse-checkout set PYTHON/2CPU
+      component: dev
+events:
+  postStart:
+    - sparse-checkout
