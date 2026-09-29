@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: getting-started-samples
+  namespace: devspaces
+  labels:
+    app.kubernetes.io/part-of: che.eclipse.org
+    app.kubernetes.io/component: getting-started-samples
+data:
+  my-samples.json: |
+    [
+      {
+        "displayName": "Python (2 CPU)",
+        "description": "Python development environment with 2 CPU limit",
+        "tags": ["Python", "UDI"],
+        "url": "https://github.com/agiertli/sparse-attribute/tree/main/PYTHON/2CPU",
+        "icon": {
+          "base64data": "iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAFnElEQVRoge2ZX2xTVRzHv+f2dvd2t93a0XXdH7axjW0MHMP9EWcgJiQQjEowPvigifrgk4kvGl9MfNAnja8+aMITJhoTo0Yj0YgxBJCAG5sMHBtjrHTr1q3t2vXe9vb24MOyyrp7e9t1kPhJbnJ7z+/8fp/fOed3fvcW+J8b2egA7pvBJ+6bwSfum8En7pvBJ+6bwScswQnlCd5fHLcVU5/X3hgn/6ZULxQg6eDLmRLDmXL5kqOFl2R0dLcnhIgLe1eLmShqXrCK4BGAL/w9nRaFQCb3VLT6m1oC3d1/3r58+m3xL0FNyU5sM/q/9Z7vVcbGiP9fX0/mfu5+5Y9XfyNjq6yEzg72sGz6VRHaWJG1iiVZB7S19g8m8Nf2TIqR6V/9/c/bE5TBwUbL1h9xWlqCtd3+A8g6NtQ24rFGQ5Cf2/cvuqIqekxXlsNvMyvGJE6O6tUcDX+g3NrfoFwKBfT/2mq5BAgA==",
+          "mediatype": "image/png"
+        }
+      },
+      {
+        "displayName": "Python (4 CPU)",
+        "description": "Python development environment with 4 CPU limit",
+        "tags": ["Python", "UDI"],
+        "url": "https://github.com/agiertli/sparse-attribute/tree/main/PYTHON/4CPU",
+        "icon": {
+          "base64data": "iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAFnElEQVRoge2ZX2xTVRzHv+f2dvd2t93a0XXdH7axjW0MHMP9EWcgJiQQjEowPvigifrgk4kvGl9MfNAnja8+aMITJhoTo0Yj0YgxBJCAG5sMHBtjrHTr1q3t2vXe9vb24MOyyrp7e9t1kPhJbnJ7z+/8fp/fOed3fvcW+J8b2egA7pvBJ+6bwSfum8En7pvBJ+6bwScswQnlCd5fHLcVU5/X3hgn/6ZULxQg6eDLmRLDmXL5kqOFl2R0dLcnhIgLe1eLmShqXrCK4BGAL/w9nRaFQCb3VLT6m1oC3d1/3r58+m3xL0FNyU5sM/q/9Z7vVcbGiP9fX0/mfu5+5Y9XfyNjq6yEzg72sGz6VRHaWJG1iiVZB7S19g8m8Nf2TIqR6V/9/c/bE5TBwUbL1h9xWlqCtd3+A8g6NtQ24rFGQ5Cf2/cvuqIqekxXlsNvMyvGJE6O6tUcDX+g3NrfoFwKBfT/2mq5BAgA==",
+          "mediatype": "image/png"
+        }
+      }
+    ]
